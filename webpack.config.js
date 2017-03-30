@@ -8,34 +8,25 @@ module.exports =
                 "index":__dirname+'/src/main.js',
             },
         output: {
-            path: __dirname+'/dist/js',  //输出文件夹
-            filename:'[name].js'   //最终打包生成的文件名(只是文件名，不带路径的哦)
+            path: __dirname+'/dist/',  //输出文件夹
+            publicPath: '/dist/',
+            filename: 'build.js'
         },
         resolve: {
-             alias: {vue: 'vue/dist/vue.js'},
+             alias: {'vue$': 'vue/dist/vue.esm.js'},
          },
         externals: {
 
         },
         module:{
             loaders:[
-                {test:/\.js$/,exclude: /^node_modules$/,loader:"babel-loader",query:{compact:true}},
+                {test:/\.js$/,exclude: /^node_modules$/,loader:"babel-loader"},
                 //这里肯定要加入n个loader 譬如vue-loader、babel-loader、css-loader等等
                 {
                     test: /\.vue$/,
                     exclude: /node_modules/,
-                    use: ['vue-loader','vue-style-loader','vue-html-loader'],
+                    use: ['vue-loader'],
                 }
             ]
         },
-        plugins:[
-            new HtmlWebpackPlugin({
-                filename: __dirname+'/dist/index.html',   //目标文件
-                template: __dirname+'/src/html/index.html', //模板文件
-                inject:'body',
-                hash:true,  //代表js文件后面会跟一个随机字符串,解决缓存问题
-                chunks:["index"]
-            })
-
-        ]
     }

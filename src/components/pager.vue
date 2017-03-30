@@ -36,22 +36,25 @@
     }
 </style>
 <template>
+    <div id="app">
     <div class="vue-pagination" style="display: inline-block;vertical-align: middle;margin: 10px 0;" v-if="page>1">
         <ul>
-            <li :class="{\'disabled\': current == 1}"><a href="javascript:;" @click="pageTo(1)"> 首页 </a></li>
-            <li :class="{\'disabled\': current == 1}"><a href="javascript:;" @click="pageTo(current - 1)"> 上一页 </a></li>
-            <li v-for="p in grouplist" :class="{\'active\': current == p.val}"><a href="javascript:;" @click="pageTo(p.val)"> {{p.text }} </a></li>
-            <li :class="{\'disabled\': current == page}"><a href="javascript:;" @click="pageTo(current + 1)"> 下一页</a></li>
-            <li :class="{\'disabled\': current == page}"><a href="javascript:;" @click="pageTo(page)"> 尾页 </a></li>
-            <li style="margin:0 5px;">第<input type="number" min="1" onkeyup="this.value=this.value.replace(/\D/, '');" :value="inputNum">页</li>'
-            <li><a href="javascript:;" @click="btnPage()" style="padding: .5rem;"> 确定 </a></li>'
-            <li style="margin:0 5px;">/共 {{page}}页</li>'
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="pageTo(1)"> 首页 </a></li>
+            <li :class="{'disabled': current == 1}"><a href="javascript:;" @click="pageTo(current - 1)"> 上一页 </a></li>
+            <li v-for="p in grouplist" :class="{'active': current == p.val}"><a href="javascript:;" @click="pageTo(p.val)"> {{p.text }} </a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="pageTo(current + 1)"> 下一页</a></li>
+            <li :class="{'disabled': current == page}"><a href="javascript:;" @click="pageTo(page)"> 尾页 </a></li>
+            <li style="margin:0 5px;">第<input type="number" min="1" v-model.number="inputNum" onkeyup="this.value=this.value.replace(/\D/, '');" >页</li>
+            <li><a href="javascript:;" @click="btnPage()" style="padding: .5rem;"> 确定 </a></li>
+            <li style="margin:0 5px;">/共 {{page}}页</li>
         </ul>
+    </div>
     </div>
 </template>
 <script>
 
     export default {
+        name: 'pager',
         data() {
             return {
                 inputNum: 1,    //文本框输入页码
