@@ -6,3 +6,5 @@ vue.js 分页
 安装 $ npm install
 运行 $ npm run dev
 
+
+static目录下为独立构建版本，可在浏览器环境下使用
