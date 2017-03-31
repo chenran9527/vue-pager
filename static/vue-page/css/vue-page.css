@@ -1,3 +1,9 @@
+body {
+    overflow: auto;
+    line-height: 1;
+    font-size: 12px;
+    font-family: "\5B8B\4F53","Arial";
+}
 .vue-pagination {
    display: inline-block;
    vertical-align: middle;
@@ -13,6 +19,8 @@
    border:1px solid #ddd;
    background:#fff;
    color:#666666;
+   outline: none;
+   text-decoration: none;
  }
  .vue-pagination li a:hover{
    background:#eee;
