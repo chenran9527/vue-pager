@@ -2,42 +2,48 @@ body {
     overflow: auto;
     line-height: 1;
     font-size: 12px;
-    font-family: "\5B8B\4F53","Arial";
+    font-family: "\5B8B\4F53", "Arial";
 }
+
 .vue-pagination {
-   display: inline-block;
-   vertical-align: middle;
-	margin: 10px 0;
- }
- .vue-pagination li{
-   display: inline-block;
-   color:#666666;
- }
- .vue-pagination li a{
-   padding:.5rem 1rem;
-   display:inline-block;
-   border:1px solid #ddd;
-   background:#fff;
-   color:#666666;
-   outline: none;
-   text-decoration: none;
- }
- .vue-pagination li a:hover{
-   background:#eee;
- }
- .vue-pagination li.active a{
-   background:#0E90D2;
-   background-color: #20a8f7 !important;
-   color:#fff;
- }
- .vue-pagination li input{
-  	width: 50px;
-   margin: 0 5px;
-   text-align: center;
-   height: 30px;
-   line-height: 30px;
-   border: 1px solid #e2e2e2;
-   border-radius: 2px;
-   background-color: #fff;
-   box-sizing: border-box!important;
- }
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+}
+
+.vue-pagination li {
+    display: inline-block;
+    color: #666666;
+}
+
+.vue-pagination li a {
+    padding: .5rem 1rem;
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #666666;
+    outline: none;
+    text-decoration: none;
+}
+
+.vue-pagination li a:hover {
+    background: #eee;
+}
+
+.vue-pagination li.active a {
+    background: #0E90D2;
+    background-color: #20a8f7 !important;
+    color: #fff;
+}
+
+.vue-pagination li input {
+    width: 50px;
+    margin: 0 5px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e2e2e2;
+    border-radius: 2px;
+    background-color: #fff;
+    box-sizing: border-box !important;
+}

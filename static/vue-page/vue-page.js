@@ -71,7 +71,7 @@
 	      methods:{
 	    	  pageTo: function(idx) {
 	              if( this.current != idx && idx > 0 && idx < this.page + 1) {
-	                  this.$emit('pageTo',idx);                    
+	                  this.$emit('page_to',idx);
 	              }                
 	          },
 	          btnPage: function() {
@@ -83,7 +83,7 @@
                           this.inputNum = this.page;
                       }
                       if(this.current != this.inputNum && this.inputNum > 0 && this.inputNum < this.page + 1) {
-                          this.$emit('pageTo',this.inputNum);
+                          this.$emit('page_to',this.inputNum);
                       }
                   }
 	          }

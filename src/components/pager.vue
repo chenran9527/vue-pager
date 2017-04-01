@@ -1,4 +1,10 @@
 <style type="text/css">
+    body {
+        overflow: auto;
+        line-height: 1;
+        font-size: 12px;
+        font-family: "\5B8B\4F53", "Arial";
+    }
     .vue-pagination {
         display: inline-block;
         vertical-align: middle;

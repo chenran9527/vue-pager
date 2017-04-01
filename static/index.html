@@ -8,12 +8,12 @@
   </head>
   <body>
   <div id="app">
-    <pager :total="total" :current="current" :display="display" v-on:pageTo="pageTo"></pager>
+    <pager :total="total" :current="current" :display="display" v-on:page_to="pageTo"></pager>
   </div>
   <script src="vue.js"></script>
   <script src="vue-page/vue-page.js"></script>
   <script>
-      var vmObj = new Vue({
+      new Vue({
           el: '#app',
           //数据对象
           data: {

@@ -9,7 +9,7 @@ var server = new WebpackDevServer(compiler, {
     publicPath: config.publicPath,
     stats: {
         colors: true //显示不同的颜色区分打包的文件
-    }
+    },
 });
 
 /*server.app.get(`${config.base}*`, function (req, res) {
